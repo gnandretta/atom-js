@@ -6,7 +6,7 @@ Clojure(Script) [atoms](http://clojuredocs.org/clojure.core/atom).
 # Usage
 
 ```js
-var atom = require('referencia);
+var atom = require('referencia');
 
 var gabriel = atom({likes: "ice cream"});
 
