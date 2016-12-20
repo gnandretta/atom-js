@@ -5,12 +5,12 @@ function Atom(state) {
 
 Atom.prototype = {
 
-  addWatch(k, f) {
+  addWatch: function(k, f) {
     this.watches[k] = f;
     return this;
   },
 
-  removeWatch(k) {
+  removeWatch: function(k) {
     delete this.watches[k];
     return this;
   },
