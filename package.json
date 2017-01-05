@@ -1,6 +1,6 @@
 {
-  "name": "referencia",
-  "version": "0.0.2",
+  "name": "@gnandretta/atom",
+  "version": "0.0.0",
   "description": "Atom like reference type to manage and observe state changes",
   "author": "Gabriel Andretta",
   "main": "atom.js",
@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gnandretta/referencia.git"
+    "url": "git+https://github.com/gnandretta/atom-js.git"
   },
   "bugs": {
-    "url": "https://github.com/gnandretta/referencia/issues"
+    "url": "https://github.com/gnandretta/atom-js/issues"
   },
-  "homepage": "https://github.com/gnandretta/referencia#readme",
+  "homepage": "https://github.com/gnandretta/atom-js#readme",
   "license": "MIT",
   "devDependencies": {
     "tape": "^4.5.1"

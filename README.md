@@ -1,4 +1,4 @@
-# Referencia
+# Atom
 
 Manage and observe state changes in JavaScript, based on
 Clojure(Script) [atoms](http://clojuredocs.org/clojure.core/atom).
@@ -6,7 +6,7 @@ Clojure(Script) [atoms](http://clojuredocs.org/clojure.core/atom).
 # Usage
 
 ```js
-var atom = require('referencia');
+var atom = require('atom');
 
 var gabriel = atom({likes: "ice cream"});
 
