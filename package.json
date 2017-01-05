@@ -7,14 +7,6 @@
   "scripts": {
     "test": "node tests.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gnandretta/referencia.git"
-  },
-  "bugs": {
-    "url": "https://github.com/gnandretta/referencia/issues"
-  },
-  "homepage": "https://github.com/gnandretta/referencia#readme",
   "license": "MIT",
   "devDependencies": {
     "tape": "^4.5.1"
