@@ -1,6 +1,6 @@
 {
   "name": "@gnandretta/atom",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Atom like reference type to manage and observe state changes",
   "author": "Gabriel Andretta",
   "main": "atom.js",
