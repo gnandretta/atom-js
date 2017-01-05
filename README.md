@@ -1,5 +1,10 @@
 # Referencia
 
+> **Deprecation warning:** This package has been renamed to
+> `@gnandretta/atom` and will no longer be maintained. No changes have
+> been made to the source code during the name change, you just need
+> to update your dependency and requires.
+
 Manage and observe state changes in JavaScript, based on
 Clojure(Script) [atoms](http://clojuredocs.org/clojure.core/atom).
 
