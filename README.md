@@ -1,4 +1,6 @@
 # Atom
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgnandretta%2Fatom-js.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fgnandretta%2Fatom-js?ref=badge_shield)
+
 
 Manage and observe state changes in JavaScript, based on
 Clojure(Script) [atoms](http://clojuredocs.org/clojure.core/atom).
@@ -95,3 +97,7 @@ params:
 ## a.removeWatch(key)
 
 Stop invoking the function for the watch with the `key` key.
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgnandretta%2Fatom-js.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fgnandretta%2Fatom-js?ref=badge_large)
