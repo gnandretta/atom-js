@@ -1,5 +1,7 @@
 # Atom
 
+> **DEPRECATED**: This project is no longer maintained.
+
 Manage and observe state changes in JavaScript, based on
 Clojure(Script) [atoms](http://clojuredocs.org/clojure.core/atom).
 
