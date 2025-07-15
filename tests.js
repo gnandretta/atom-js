@@ -53,7 +53,7 @@ test("reset doesn't fire removed watches", function(t) {
   var newState = {};
 
   a.addWatch("watch 1", function(state, oldState, key, meta) {
-    t.error(true, "should not execute");
+    t.fail("should not execute");
   });
 
   a.addWatch("watch 2", function(state, oldState, key, meta) {
@@ -110,7 +110,7 @@ test("mreset doesn't fire removed watches", function(t) {
   var resetTag = {};
 
   a.addWatch("watch 1", function(state, oldState, key, meta) {
-    t.error(true, "should not execute");
+    t.fail("should not execute");
   });
 
   a.addWatch("watch 2", function(state, oldState, key, meta) {
@@ -183,7 +183,7 @@ test("swap doesn't fire removed watches", function(t) {
   var a = atom(initialState);
 
   a.addWatch("watch 1", function(state, oldState, key, meta) {
-    t.error(true, "should not execute");
+    t.fail("should not execute");
   });
 
   a.addWatch("watch 2", function(state, oldState, key, meta) {
@@ -260,7 +260,7 @@ test("mswap doesn't fire removed watches", function(t) {
   var swapTag = {};
 
   a.addWatch("watch 1", function(state, oldState, key, meta) {
-    t.error(true, "should not execute");
+    t.fail("should not execute");
   });
 
   a.addWatch("watch 2", function(state, oldState, key, meta) {

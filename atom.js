@@ -6,6 +6,9 @@ function Atom(state) {
 Atom.prototype = {
 
   addWatch: function(k, f) {
+    if (typeof f !== 'function') {
+      throw new TypeError('Watch function must be a function');
+    }
     this.watches[k] = f;
     return this;
   },
@@ -23,10 +26,14 @@ Atom.prototype = {
   },
 
   mswap: function(meta, f) {
-    return this.mreset(
-      meta,
-      f.apply(null, [this.state].concat([].slice.call(arguments, 2)))
-    );
+    try {
+      return this.mreset(
+        meta,
+        f.apply(null, [this.state].concat([].slice.call(arguments, 2)))
+      );
+    } catch (error) {
+      throw error;
+    }
   },
 
   reset: function(state) {
@@ -38,8 +45,11 @@ Atom.prototype = {
     var oldState = this.state;
     this.state = state;
 
-    Object.keys(watches).forEach(function(k) {
-      watches[k](state, oldState, k, meta);
+    var watchKeys = Object.keys(watches);
+    watchKeys.forEach(function(k) {
+      if (watches[k]) {
+        watches[k](state, oldState, k, meta);
+      }
     });
 
     return this;
