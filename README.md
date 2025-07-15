@@ -95,3 +95,7 @@ params:
 ## a.removeWatch(key)
 
 Stop invoking the function for the watch with the `key` key.
+
+# License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

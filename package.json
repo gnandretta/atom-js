@@ -1,7 +1,7 @@
 {
-  "name": "@gnandretta/atom",
-  "version": "0.0.1",
-  "description": "Atom like reference type to manage and observe state changes",
+  "name": "atom-js",
+  "version": "1.0.0",
+  "description": "Manage and observe state changes in JavaScript, based on Clojure(Script) atoms",
   "author": "Gabriel Andretta",
   "main": "atom.js",
   "scripts": {
