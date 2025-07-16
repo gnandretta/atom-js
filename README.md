@@ -3,10 +3,30 @@
 Manage and observe state changes in JavaScript, based on
 Clojure(Script) [atoms](http://clojuredocs.org/clojure.core/atom).
 
+# Installation
+
+Install the package using npm:
+
+```bash
+npm install @gnandretta/atom
+```
+
+Or using yarn:
+
+```bash
+yarn add @gnandretta/atom
+```
+
+Or using pnpm:
+
+```bash
+pnpm add @gnandretta/atom
+```
+
 # Usage
 
 ```js
-var atom = require('atom');
+var atom = require('@gnandretta/atom');
 
 var gabriel = atom({likes: "ice cream"});
 
