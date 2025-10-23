@@ -275,3 +275,58 @@ test("mswap doesn't fire removed watches", function(t) {
     return {count: state.count + 1};
   });
 });
+test("methods support chaining", function(t) {
+  t.plan(2);
+  var state = {count: 0};
+  var a = atom(state);
+  var callCount = 0;
+  
+  var result = a
+    .addWatch("test", function() { callCount++; })
+    .reset({count: 1})
+    .removeWatch("test")
+    .swap(function(s) { return {count: s.count + 1}; });
+  
+  t.equal(result, a, "chained calls return atom instance");
+  t.equal(a.state.count, 2, "state updated through chain");
+});
+
+test("addWatch with duplicate key replaces previous watch", function(t) {
+  t.plan(1);
+  var a = atom({});
+  var firstCalled = false;
+  var secondCalled = false;
+  
+  a.addWatch("duplicate", function() { firstCalled = true; });
+  a.addWatch("duplicate", function() { secondCalled = true; });
+  
+  a.reset({});
+  
+  t.equal(secondCalled && !firstCalled, true, "only second watch executes");
+});
+
+test("removeWatch with non-existent key is safe", function(t) {
+  t.plan(1);
+  var a = atom({});
+  
+  a.removeWatch("does-not-exist");
+  a.reset({});
+  
+  t.pass("no error thrown");
+});
+
+test("watches execute in order of insertion", function(t) {
+  t.plan(3);
+  var a = atom({});
+  var executionOrder = [];
+  
+  a.addWatch("first", function() { executionOrder.push(1); });
+  a.addWatch("second", function() { executionOrder.push(2); });
+  a.addWatch("third", function() { executionOrder.push(3); });
+  
+  a.reset({});
+  
+  t.equal(executionOrder[0], 1, "first watch executed first");
+  t.equal(executionOrder[1], 2, "second watch executed second");
+  t.equal(executionOrder[2], 3, "third watch executed third");
+});
